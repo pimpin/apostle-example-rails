@@ -2,7 +2,7 @@
 
 A one stop shop to see how easily you can integrate Penpal into your Rails application.
 
-To get started, simple set your Penpal App Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
+To get started, simply set your Penpal App Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
 
 ## Who
 
