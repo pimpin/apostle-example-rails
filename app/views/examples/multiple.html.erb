@@ -1,0 +1,49 @@
+<form action="/examples/multiple" method="post" class="form">
+	<input type="hidden" name="_method" value="patch" />
+	<h2>Welcome Email</h2>
+	<% 4.times do |count| %>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="form-group">
+					<label for="name<%= count %>">Name</label>
+					<input type="text" name="names[<%= count %>]" id="name<%= count %>" placeholder="name" class="form-control" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+					<label for="email<%= count %>">Email</label>
+					<input type="email" name="emails[<%= count %>]" id="email<%= count %>" placeholder="email" class="form-control" />
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<input type="submit" value="Send" class="btn btn-default" />
+		</div>
+	</div>
+</form>
+
+<%= content_for :sidebar do %>
+	<p>This time you can send multiple copies of the welcome email. This example demonstrates the queueing functionality in the Penpal gem.</p>
+	<pre><code>
+queue = Penpal::Queue.new
+
+params[:emails].each do |index, email|
+  name = params[:names][index]
+  queue &lt;&lt; Penpal::Mail.new(
+    'welcome',
+    email: email,
+    name: name
+  )
+end
+
+if queue.size > 0
+  queue.deliver!
+end
+
+	</code></pre>
+
+<% end %>
+
+

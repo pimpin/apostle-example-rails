@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PenpalSampleRails</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Penpal Example Application</h1>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<ul class="nav nav-tabs">
+				<li <%= params[:id] == 'single' ? " class=active" : '' %>><%= link_to "Welcome Email", example_path("single") %></a></li>
+				<li <%= params[:id] == 'multiple' ? " class=active" : '' %>><%= link_to "Multiple Emails", example_path("multiple") %></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<% flash.each do |type, message| %>
+				<div class="alert <%= type.to_s == "error" ? 'alert-danger' : 'alert-success' %>"><%= message %></div>
+			<% end %>
+			<%= yield %>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+			<div class="well">
+				<%= yield :sidebar %>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<form action="/examples/single" method="post" class="form-horizontal">
+	<input type="hidden" name="_method" value="patch" />
+	<h2>Welcome Email</h2>
+	<div class="form-group">
+		<label for="name1" class="col-lg-2 control-label">Name</label>
+		<div class="col-lg-10">
+			<input type="text" name="name" id="name1" placeholder="name" class="form-control" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email1" class="col-lg-2 control-label">Email</label>
+		<div class="col-lg-10">
+			<input type="email" name="email" id="email1" placeholder="email" class="form-control" />
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
+			<input type="submit" value="Send" class="btn btn-default" />
+		</div>
+	</div>
+</form>
+
+<%= content_for :sidebar do %>
+	<p>Hey, welcome to the Penpal sample app!</p>
+	<p>	This form sends the template with slug 'welcome' to the supplied email address. The name and email will also be supplied in the data payload.</p>
+	<pre><code>
+name, email = params[:name], params[:email]
+
+mail = Penpal::Mail.new "welcome"
+mail.to = "%s &lt;%s&gt;" % [name, email]
+mail.name = name
+mail.email = email
+
+mail.deliver!
+	</code></pre>
+
+<% end %>
+
