@@ -26,7 +26,7 @@ class ExamplesController < ApplicationController
     name, email = params[:name], params[:email]
 
     unless name.blank? || email.blank?
-      mail = Penpal::Mail.new "welcome"
+      mail = Apostle::Mail.new "welcome"
       mail.to = "%s <%s>" % [name, email]
       mail.name = name
       mail.email = email
@@ -45,13 +45,13 @@ class ExamplesController < ApplicationController
 
 
   def send_multiple
-    queue = Penpal::Queue.new
+    queue = Apostle::Queue.new
 
     params[:emails].each do |index, email|
       name = params[:names][index]
       next if name.blank? || email.blank?
 
-      queue << Penpal::Mail.new('welcome', email: email, name: name)
+      queue << Apostle::Mail.new('welcome', email: email, name: name)
 
     end
 

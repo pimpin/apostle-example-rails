@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PenpalSampleRails::Application.load_tasks
+ApostleSampleRails::Application.load_tasks

@@ -1,4 +1,4 @@
-PenpalSampleRails::Application.routes.draw do
+ApostleSampleRails::Application.routes.draw do
 
   resources :examples
 

@@ -1,4 +1,4 @@
-PenpalSampleRails::Application.configure do
+ApostleSampleRails::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -27,12 +27,12 @@ PenpalSampleRails::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # These 2 lines auto-reload penpal
+  # These 2 lines auto-reload apostle
   # This first line adds our gem's lib directory to the list of directories that will be searched
   # when we encounter a missing constant
- # config.autoload_paths += %W(#{Rails.root}/../penpal-ruby/lib)
+ # config.autoload_paths += %W(#{Rails.root}/../apostle-ruby/lib)
   # This line tells rails to unload the root constant (module/class) for our gem on every request
-#  ActiveSupport::Dependencies.explicitly_unloadable_constants << 'Penpal'
-#  ActiveSupport::Dependencies.mark_for_unload 'Penpal'
-#  ActiveSupport::Dependencies.autoload_once_paths.delete(%W(#{Rails.root}/../penpal-ruby/lib))
+#  ActiveSupport::Dependencies.explicitly_unloadable_constants << 'Apostle'
+#  ActiveSupport::Dependencies.mark_for_unload 'Apostle'
+#  ActiveSupport::Dependencies.autoload_once_paths.delete(%W(#{Rails.root}/../apostle-ruby/lib))
 end

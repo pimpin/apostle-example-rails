@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
-PenpalSampleRails::Application.initialize!
+ApostleSampleRails::Application.initialize!

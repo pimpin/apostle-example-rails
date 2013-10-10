@@ -21,12 +21,12 @@
 </form>
 
 <%= content_for :sidebar do %>
-	<p>Hey, welcome to the Penpal sample app!</p>
+	<p>Hey, welcome to the Apostle sample app!</p>
 	<p>	This form sends the template with slug 'welcome' to the supplied email address. The name and email will also be supplied in the data payload.</p>
 	<pre><code>
 name, email = params[:name], params[:email]
 
-mail = Penpal::Mail.new "welcome"
+mail = Apostle::Mail.new "welcome"
 mail.to = "%s &lt;%s&gt;" % [name, email]
 mail.name = name
 mail.email = email

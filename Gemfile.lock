@@ -6,11 +6,6 @@ GIT
       railties (>= 3.0)
       sass (>= 3.2)
 
-PATH
-  remote: ../penpal-ruby
-  specs:
-    penpal (0.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +33,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    apostle (0.1.0)
     arel (4.0.0)
     atomic (1.1.14)
     builder (3.1.4)
@@ -125,11 +121,11 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  apostle
   coffee-rails (~> 4.0.0)
   dotenv-rails
   jbuilder (~> 1.2)
   jquery-rails
-  penpal!
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

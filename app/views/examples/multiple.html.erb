@@ -25,13 +25,13 @@
 </form>
 
 <%= content_for :sidebar do %>
-	<p>This time you can send multiple copies of the welcome email. This example demonstrates the queueing functionality in the Penpal gem.</p>
+	<p>This time you can send multiple copies of the welcome email. This example demonstrates the queueing functionality in the Apostle gem.</p>
 	<pre><code>
-queue = Penpal::Queue.new
+queue = Apostle::Queue.new
 
 params[:emails].each do |index, email|
   name = params[:names][index]
-  queue &lt;&lt; Penpal::Mail.new(
+  queue &lt;&lt; Apostle::Mail.new(
     'welcome',
     email: email,
     name: name

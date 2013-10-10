@@ -1,12 +1,12 @@
-# Penpal Rails Example Application
+# Apostle Rails Example Application
 
-A one stop shop to see how easily you can integrate Penpal into your Rails application.
+A one stop shop to see how easily you can integrate Apostle into your Rails application.
 
-To get started, simply set your Penpal App Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
+To get started, simply set your Apostle App Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
 
 ## Who
 
-Created with ♥ by [Mal Curtis](http://github.com/snikch) for [Penpal](http://TODO:weneedaurl.com)
+Created with ♥ by [Mal Curtis](http://github.com/snikch) for [Apostle](http://TODO:weneedaurl.com)
 
 Twitter: [snikchnz](http://twitter.com/snikchnz)
 

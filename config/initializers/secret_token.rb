@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PenpalSampleRails::Application.config.secret_key_base = '6d6f70f6342ec42a5650bfe67ff9cf8d351939d1e025102d73b75f8f102ed91232000e157aff32e9f74e54bfdbfee2dedf33f1e2035ebc2b375b85628bfecdc7'
+ApostleSampleRails::Application.config.secret_key_base = '6d6f70f6342ec42a5650bfe67ff9cf8d351939d1e025102d73b75f8f102ed91232000e157aff32e9f74e54bfdbfee2dedf33f1e2035ebc2b375b85628bfecdc7'

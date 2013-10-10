@@ -4,7 +4,7 @@ ruby "2.0.0"
 
 gem 'dotenv-rails'
 
-gem 'penpal', path: '../penpal-ruby'
+gem 'apostle'
 
 gem 'anjlab-bootstrap-rails',
   require: 'bootstrap-rails',
