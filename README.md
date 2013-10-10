@@ -1,12 +1,13 @@
+
 # Apostle Rails Example Application
 
 A one stop shop to see how easily you can integrate Apostle into your Rails application.
 
-To get started, simply set your Apostle App Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
+To get started, simply set your Apostle Domain Key in the `.env` file, run `bundle install` and start the server with `bundle exec rails s`.
 
 ## Who
 
-Created with ♥ by [Mal Curtis](http://github.com/snikch) for [Apostle](http://TODO:weneedaurl.com)
+Created with ♥ by [Mal Curtis](http://github.com/snikch) for [Apostle](http://apostle.io)
 
 Twitter: [snikchnz](http://twitter.com/snikchnz)
 
